@@ -126,10 +126,7 @@ that fly at least five routes from that airport.</div><div class="credits"><a hr
       script.src = source;
   }
 
-  getScript('https://cdn.secure.espn.go.com/combiner/c?js=jquery-1.10.2.js%2Canalytics%2FVisitorAPI.js%2Canalytics%2FsOmni.2.js&ver=4.2-RC4-32271.3', function() {
-      loadOmniture();
-      espn.track.init();
-  })
+  getScript('/flights/js/jquery-1.10.2.min.js', function() {})
 </script>
 <!-- End Omniture -->
 
@@ -160,7 +157,7 @@ that fly at least five routes from that airport.</div><div class="credits"><a hr
 				var gads = document.createElement('script');
 				gads.async = true;
 				gads.type = 'text/javascript';
-				gads.src = '//www.googletagservices.com/tag/js/gpt.js';
+				return; /* ad loader disabled for archive */
 				var node = document.getElementsByTagName('script')[0];
 				node.parentNode.insertBefore(gads, node);
 				current_bp = get_current_bp();
@@ -240,7 +237,7 @@ that fly at least five routes from that airport.</div><div class="credits"><a hr
 		if (d.getElementById(id)) return;
 		js = d.createElement(s);
 		js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#version=v2.3&xfbml=1&appId=797620670264818";
+		js.src = "data:text/javascript,";
 		fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 <!-- End Facebook -->
